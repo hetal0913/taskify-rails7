@@ -1,0 +1,17 @@
+<% if notice.present? %> 
+    <p class="bg-green-50 font-medium py-3 px-3 rounded-lg text-green-500 inline-block" id="notice"><%= notice %></p>
+<% end %>    
+
+<h1 class="font-bold text-2xl">Task Manager</h1>
+
+<div class="mt-4">
+  <%= render "form", task: @task %>
+</div>
+
+<div id="tasks">
+    <h1 class="font-bold text-lg mb-7">Tasks</h1>
+  
+    <div class="px-5" data-controller="tasks">
+      <%= render @tasks %>
+    </div>
+  </div>
